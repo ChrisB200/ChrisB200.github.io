@@ -1,0 +1,392 @@
+/* Overall Element Styling */
+:root {
+  --primary1: #020B14;
+  --primary2: #192a3d;
+  --secondary1: white;
+  --accent1: #38c233;
+}
+
+* {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  background-color: var(--primary1);
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  margin: 0;
+}
+
+/* Overall Styling */
+.background-code {
+  color: var(--primary2);
+  letter-spacing: 0.3px;
+  transition: color 0.2s;
+}
+
+/* Header Styling */
+#header-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.2s, transform 0.2s;
+  z-index: 2;
+  box-shadow: inset 0 35px 13px rgba(0, 0, 0, 0.397);
+}
+
+#header-navbar.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.logo-container {
+  margin-top: 0.5rem;
+  margin-left: 2rem;
+}
+
+.logo-container img {
+  width: 10rem;
+  height: auto;
+}
+
+.header-anchors {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  font-size: 1rem;
+  margin-right: 2rem;
+}
+
+.header-anchors a {
+  color: var(--secondary1);
+}
+
+.header-anchors a:hover .background-code {
+  color: var(--accent1);
+}
+
+.header-anchors li {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-anchors li p {
+  text-align: right;
+  font-size: 0.6rem;
+}
+
+/* Start Section Styling */
+#start-section {
+  margin-top: 16rem;
+  height: 84vh;
+}
+
+.start-content {
+  display: flex;
+  justify-content: left;
+  gap: 7rem;
+  margin-left: 13vw;
+}
+
+.start-details-container {
+  display: flex;
+}
+
+.start-details {
+  position: relative;
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
+  left: 3rem;
+  margin-right: 5rem;
+}
+
+.section-symbols-css {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  bottom: 2rem;
+  left: 1rem;
+}
+
+.section-title-css {
+  color: var(--accent1);
+}
+
+.brackets {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  /* Vertically center the brackets */
+  height: 100%;
+  font-size: 1.2rem;
+  /* Adjust the font size as needed */
+  position: relative;
+  /* Position relative for pseudo-element */
+  margin-bottom: 20px;
+}
+
+.first-bracket {
+  position: relative;
+}
+
+.second-bracket {
+  position: relative;
+}
+
+.brackets::before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 0;
+  /* Position it at the center horizontally of the container */
+  width: 1px;
+  /* Adjust the width as needed */
+  height: calc(100% - 60px);
+  /* Make the line cover the entire height of the container */
+  background-color: var(--secondary1);
+  /* Adjust the color as needed */
+  transform: translateX(calc(-50% + 8px));
+  /* Center the line horizontally on the container */
+  margin-right: 5px;
+  /* Adjust the margin to control the space between the brackets */
+}
+
+/* Optional: Style the elements */
+.first-bracket,
+.second-bracket {
+  color: var(--accent1);
+}
+
+.hi-text {
+  color: var(--secondary1);
+  font-size: 1.2rem;
+}
+
+.start-title-name {
+  color: var(--accent1);
+  font-size: 4rem;
+}
+
+.start-caption-one {
+  color: var(--secondary1);
+  font-size: 2em;
+}
+
+#glitchy-text {
+  color: var(--secondary1);
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid var(--accent1);
+  animation: typing 2s steps(30, end), blink-caret 0.5s step-end infinite;
+  font-weight: bold;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+
+  from,
+  to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: var(--accent1);
+  }
+}
+
+.start-caption-two {
+  color: #828282;
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.social-container:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.social-container {
+  width: 40px;
+  height: auto;
+  transition: transform 0.2s;
+}
+
+.social-container img {
+  margin-top: 1rem;
+  width: 100%;
+  height: 100%;
+}
+
+.start-image-container {
+  transform: perspective(22rem) rotateY(-13deg) rotateX(6deg)
+}
+
+.start-picture-container {
+  width: 400px;
+  height: auto;
+  border: 2px solid white;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.start-picture-container img {
+  width: 100%;
+  transform: scale(1.05);
+  height: auto;
+}
+
+.start-image-code {
+  position: relative;
+  bottom: 35px;
+  left: 260px;
+  z-index: -1;
+  font-size: 1.2rem;
+}
+
+/* About Section Styling */
+#about-section {
+}
+
+.section-title {
+  font-size: 4rem;
+  color: var(--secondary1);
+  text-align: center;
+}
+
+.about-content {
+  display: flex;
+  justify-content: left;
+  margin-left: 11vw;
+  margin-right: 11vw;
+  padding-bottom: 20rem;
+  position: relative;
+  top: 80px;
+}
+
+.about-highlighted {
+  color: var(--accent1);
+  font-size: 1rem;
+}
+
+.about-details-bullets {
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  justify-content: center;
+}
+
+.about-highlighted {
+  text-align: right;
+  margin-left: 20px;
+}
+
+.about-details {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  color: var(--secondary1);
+  font-size: 1rem;
+}
+
+.about-details-body {
+  text-align: left;
+  margin-left: 2rem;
+}
+
+/* Skills Section Styling */
+#auraThingy{
+  height: 600px;
+  width: 600px;
+  background: rgb(12, 105, 67);
+  background: radial-gradient(circle, rgba(57, 197, 69, 0.11) 0%,  var(--primary1) 70%);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+  position: absolute;
+  z-index: -3;
+  overflow: hidden;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.skill-area {
+  width: 250px;
+  height: 250px;
+  border: 1px solid var(--secondary1);
+  padding: 35px;
+}
+
+.skill-area-title {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-top: 20px;
+  gap: 15px;
+}
+
+.skill-area-icon {
+  width: 35px;
+  height: 35px;
+}
+
+.skill-area-icon img {
+  width: 100%;
+  height: 100%;
+  color: white;
+}
+
+.skill-title {
+  font-size: 2rem;
+  color: var(--secondary1);
+  font-weight: bold;
+  text-decoration: solid;
+}
+
+.skill-tools {
+  color: var(--secondary1);
+  list-style: none;
+  gap: 20px;
+  padding: 0;
+  font-size: 1.2rem;
+}
