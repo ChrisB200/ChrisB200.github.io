@@ -1,13 +1,27 @@
 /* Overall Element Styling */
 :root {
   --primary1: #020B14;
-  --primary2: #192a3d;
+  --primary2: #1a293a;
   --secondary1: white;
   --accent1: #38c233;
 }
 
 * {
   font-family: 'JetBrains Mono', monospace;
+}
+
+/* Customize the scrollbar track */
+::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+  height: 10px;
+  background-color: var(--primary2);
+  border-radius: 5px;
+}
+
+/* Customize the scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background: var(--accent1); /* Color of the thumb */
+  border-radius: 5px; /* Rounded corners */
 }
 
 body {
@@ -280,8 +294,6 @@ a {
 }
 
 /* About Section Styling */
-#about-section {
-}
 
 .section-title {
   font-size: 4rem;
@@ -334,7 +346,7 @@ a {
   height: 600px;
   width: 600px;
   background: rgb(12, 105, 67);
-  background: radial-gradient(circle, rgba(57, 197, 69, 0.11) 0%,  var(--primary1) 70%);
+  background: radial-gradient(circle, rgba(57, 197, 69, 0.11) 0%,  transparent 70%);
 	background-size: 100%;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -389,4 +401,93 @@ a {
   gap: 20px;
   padding: 0;
   font-size: 1.2rem;
+}
+
+/* Projects Section */
+#projects-section {
+  margin-top: 11rem;
+  padding-top: 7rem;
+  margin-left: 11vw;
+  margin-right: 11vw;
+  height: 500px;
+}
+
+.bg-colour {
+  position: absolute;
+  background-color: var(--primary2);
+  width: 100%;
+  height: 100%;
+  z-index: -6;
+}
+
+.projects-container {
+  display: flex;
+  margin-top: 6rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  gap: 75px;
+  justify-content: left;
+}
+
+.project {
+  display: flex;
+  height: 250px;
+  min-width: 600px;
+  gap: 20px;
+  padding: 5px
+}
+
+.project-image {
+  width: 150px;
+  height: 84px;
+  background-color: var(--primary2);
+  border-radius: 7px;
+  display: flex;
+}
+
+.project-image img {
+  width: 100%;
+  height: auto;
+}
+
+.project-details {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.project-title {
+  font-size: 1.8rem;
+  font-weight: lighter;
+  color: var(--secondary1);
+}
+
+.project-description {
+  font-size: 0.9rem;
+  color: var(--secondary1);
+  font-weight: lighter;
+}
+
+.project-skills {
+  padding: 0;
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.project-skills li {
+  padding: 5px 15px 5px 15px;
+  color: var(--accent1);
+  background-color: #38c2330e;
+  border-radius: 40px;
+}
+
+.project-image p {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  color: var(--secondary1);
 }
