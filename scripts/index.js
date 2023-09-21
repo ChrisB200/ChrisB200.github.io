@@ -3,9 +3,11 @@ const header = document.getElementById("header-navbar");
 
 document.addEventListener('mousemove', function(e) {
     var auraThingy = document.getElementById('auraThingy');
-    auraThingy.style.left = (e.pageX - 300) + 'px';
-    auraThingy.style.top = (e.pageY - 300) + 'px';
+    auraThingy.style.left = (e.clientX - 300) + 'px';
+    auraThingy.style.top = (e.clientY - 300) + 'px';
 });
+
+
 
 function redirectToPage(url) {
     window.open(url, '_blank');

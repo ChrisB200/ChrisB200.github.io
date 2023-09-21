@@ -1,7 +1,7 @@
 /* Overall Element Styling */
 :root {
   --primary1: #020B14;
-  --primary2: #1a293a;
+  --primary2: #182738;
   --secondary1: white;
   --accent1: #38c233;
 }
@@ -314,17 +314,25 @@ a {
 .about-highlighted {
   color: var(--accent1);
   font-size: 1rem;
+  text-align: right;
+  margin-left: 20px;
 }
 
 .about-details-bullets {
   display: grid;
-  grid-template-columns: 1fr 6fr;
+  grid-template-columns: 150px 6fr;
   justify-content: center;
 }
 
-.about-highlighted {
-  text-align: right;
-  margin-left: 20px;
+.about-bullet-points {
+  margin: 0;
+  margin-left: 2rem;
+}
+
+.about-bullet-points div{
+  display: flex;
+  justify-content: left;
+  gap: 0;
 }
 
 .about-details {
@@ -350,9 +358,10 @@ a {
 	background-size: 100%;
 	background-repeat: no-repeat;
 	background-position: center;
-  position: absolute;
-  z-index: -3;
+  position: fixed;
+  z-index: 5;
   overflow: hidden;
+  pointer-events: none;
 }
 
 .skills-container {
@@ -433,10 +442,21 @@ a {
 
 .project {
   display: flex;
-  height: 250px;
+  margin-bottom: 10px;
   min-width: 600px;
   gap: 20px;
-  padding: 5px
+  padding: 10px;
+  border-radius: 15px;
+  transition-property: background-color, filter, box-shadow;
+  transition-duration: 0.15s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project:hover {
+  cursor: pointer !important;
+  background-color: rgba(43, 201, 38, 0.055);
+  filter: drop-shadow(rgba(0, 0, 0, 0.04) 0px 10px 8px) drop-shadow(rgba(0, 0, 0, 0.1) 0px 4px 3px);
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(148, 163, 184, 0.1) 0px 1px 0px 0px inset;
 }
 
 .project-image {
@@ -490,4 +510,74 @@ a {
   display: flex;
   align-items: center;
   color: var(--secondary1);
+}
+
+footer {
+  padding: 100px;
+  margin-top: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #13202e;
+}
+
+.contact-description {
+  margin-bottom: 2rem;
+}
+
+.contact-description h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: var(--secondary1);
+}
+
+.contact-description p {
+  font-size: 1.2rem;
+  color: white;
+  font-weight: lighter;
+}
+
+.contact-socials {
+  color: var(--secondary1);
+  font-size: 1.2rem;
+}
+
+.contact-socials a {
+  display: block;
+}
+
+.contact-email {
+  color: var(--accent1);
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.contact-linkedin {
+  margin-bottom: 1rem;
+  transition: color 0.2s;
+}
+
+.contact-github {
+  transition: color 0.2s;
+}
+
+.contact-email {
+  transition: color 0.2s;
+}
+
+.contact-linkedin:hover {
+  color: var(--accent1);
+  cursor: pointer;
+}
+
+.contact-email:hover {
+  color: var(--accent1);
+  cursor: pointer;
+}
+
+.contact-github:hover {
+  color: var(--accent1);
+  cursor: pointer;
 }
