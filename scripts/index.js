@@ -7,6 +7,13 @@ document.addEventListener('mousemove', function(e) {
     auraThingy.style.top = (e.clientY - 300) + 'px';
 });
 
+function onClickNavLink(element) {
+    var my_element = document.getElementById(element);
+
+    my_element.scrollIntoView({behavior: "smooth", block: "start"});
+    // Prevent the default behavior of the anchor link
+    event.preventDefault();   
+}
 
 
 function redirectToPage(url) {
@@ -63,3 +70,40 @@ function type() {
 }
 
 setTimeout(type, 2000);
+
+const menuButton = document.getElementById("menu-button");
+const menuItems = document.getElementById("menu-items");
+
+menuButton.addEventListener("click", function (event) {
+    event.stopPropagation();
+    toggleMenu();
+});
+
+// Function to toggle the menu
+function toggleMenu() {
+    if (menuItems.style.display === "none" || menuItems.style.display === "") {
+        menuItems.style.display = "block";
+    } else {
+        menuItems.style.display = "none";
+    }
+}
+
+// Event listener to close the menu when clicking outside
+document.addEventListener("click", function (event) {
+    const isClickInsideMenu = menuItems.contains(event.target);
+    const isClickOnMenuButton = menuButton.contains(event.target);
+  
+    if (window.innerWidth < 910) {
+        menuItems.style.display = "none"; // Close the menu
+    }
+});
+
+// Event listener to handle window resize
+window.addEventListener("resize", function () {
+    if (window.innerWidth >= 910) {
+        menuItems.style.display = "flex"; // Show the menu when window width is greater than or equal to 910 pixels
+    }
+    else {
+        menuItems.style.display = "none"; // Close the menu
+    }
+});

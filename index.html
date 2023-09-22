@@ -28,24 +28,24 @@
       <img alt="My Logo" src="images/logos/full-logo.svg">
     </div>
     <div class="header-anchors-container">
-      <ul class="header-anchors">
-        <li>
+      <ul id="menu-items" class="header-anchors">
+        <li onclick="onClickNavLink('start-section')">
           <p class="background-code">01</p>
           <a href="#"><span class="background-code">// </span>Start</a>
         </li>
-        <li>
+        <li onclick="onClickNavLink('about-section')">
           <p class="background-code">02</p>
           <a href="#"><span class="background-code">// </span>About</a>
         </li>
-        <li>
+        <li onclick="onClickNavLink('skills-section')">
           <p class="background-code">03</p>
           <a href="#"><span class="background-code">// </span>Skills</a>
         </li>
-        <li>
+        <li onclick="onClickNavLink('projects-section')">
           <p class="background-code">04</p>
           <a href="#"><span class="background-code">// </span>Projects</a>
         </li>
-        <li>
+        <li onclick="onClickNavLink('footer-section')">
           <p class="background-code">05</p>
           <a href="#"><span class="background-code">// </span>Contact</a>
         </li>
@@ -54,6 +54,7 @@
           <a href="#"><span class="background-code">// </span>CV</a>
         </li>
       </ul>
+      <div class="menu-button-container"><img src="images/icons/dropdown.png" id="menu-button"></div>
     </div>
   </nav>
   <section id="start-section">
@@ -121,10 +122,24 @@
             
             <div class="about-details-bullets">
               <p class="about-highlighted"><span>Hobbies:</span></p>
-              <p class="about-details-body">- I Like playing games, alongside developing them in my free time.
-                <br>- I Like building computers.
-                <br>- I Like repairing devices.
-                <br>- I Like video editing.</p>
+              <div class="about-bullet-points">
+                <div>
+                  <p>-</p>
+                  <p class="about-details-body"> I Like playing games, alongside developing them in my free time.</p>
+                </div>
+                <div>
+                  <p>-</p>
+                  <p class="about-details-body"> I Like building computers.</p>
+                </div>
+                <div>
+                  <p>-</p>
+                  <p class="about-details-body"> I Like video editing.</p>
+                </div>
+                <div>
+                  <p>-</p>
+                  <p class="about-details-body"> I Like repairing devices.</p>
+                </div>
+              </div>          
             </div>
             <div class="about-details-bullets">
               <p class="about-highlighted"><span>Achievements:</span></p>
@@ -259,7 +274,7 @@
       </div>
     </div>
   </section>
-  <footer>
+  <footer id="footer-section">
     <div class="footer-contact">
       <div class="contact-description">
         <h1>Avaiable for select freelance opportunities</h1>

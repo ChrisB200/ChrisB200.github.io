@@ -24,6 +24,10 @@
   border-radius: 5px; /* Rounded corners */
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   width: 100%;
@@ -59,7 +63,7 @@ a {
   left: 0;
   width: 100%;
   display: flex;
-  align-items: end;
+  align-items: center;
   justify-content: space-between;
   opacity: 0;
   transform: translateY(-20px);
@@ -83,12 +87,24 @@ a {
   height: auto;
 }
 
+
 .header-anchors {
   display: flex;
   list-style: none;
   gap: 1.5rem;
   font-size: 1rem;
   margin-right: 2rem;
+}
+
+.menu-button-container {
+  width: 40px;
+  margin: 2rem;
+}
+
+#menu-button {
+  display: none;
+  width: 100%;
+  height: auto;
 }
 
 .header-anchors a {
@@ -109,10 +125,23 @@ a {
   font-size: 0.6rem;
 }
 
+.header-anchors li {
+  transition: opacity 0.3s ease; /* Add a transition for smooth fading */
+}
+
+.header-anchors li:not(:hover) {
+  opacity: 0.5; /* Reduce opacity for elements that are not being hovered */
+}
+
+.header-anchors li:hover {
+  opacity: 1; /* Keep full opacity for the hovered element */
+}
+
+
 /* Start Section Styling */
 #start-section {
   margin-top: 16rem;
-  height: 84vh;
+  margin-bottom: 16rem;
 }
 
 .start-content {
@@ -580,4 +609,72 @@ footer {
 .contact-github:hover {
   color: var(--accent1);
   cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .header-anchors {
+    display: none; /* Hide the menu items by default */
+    position: absolute;
+    right: 0;
+    top: 20px;
+    z-index: 3; /* Set a higher z-index for the menu items */
+    background-color: var(--primary2);
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+
+  #header-navbar {
+    align-items: center;
+  }
+
+  #menu-button {
+    display: block; /* Display the button */
+    border-style: none;
+    margin-right: 2rem;
+  }
+
+  .menu-button-container:hover {
+    cursor: pointer;
+  }
+
+  .header-anchors li a {
+    text-align: center;
+  }
+
+  .background-code {
+    display: none;
+  }
+
+  .header-anchors li {
+    padding: 40px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 13px;
+  }
+
+  .about-details-bullets {
+    grid-template-columns: none;
+    grid-template-rows: 40px 1fr;
+  }
+
+  .about-highlighted {
+    text-align: left;
+  }
+
+  .projects-container {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    flex-direction: column;
+    height: 300px;
+  }
+
+  .project {
+    flex-direction: column;
+    min-width: 300px;
+  }
 }
