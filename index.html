@@ -1,295 +1,270 @@
 <!DOCTYPE html>
 
 <html>
-
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title></title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="styles/index.css">
-  <link rel="icon" type="image/x-icon" href="images/logos/partial-logo.svg">
-  <title>Christopher Bonner - Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;0,800;1,300;1,400;1,500;1,700&display=swap"
-    rel="stylesheet">
-</head>
-
-<body>
-  <div class="background">
-    <div id="auraThingy"></div>
-  </div>
-  <script src="scripts/index.js" async defer></script>
-  <nav id="header-navbar">
-    <div class="logo-container">
-      <img alt="My Logo" src="images/logos/full-logo.svg">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="icon" type="image/x-icon" href="images/logos/partial-logo.svg">
+    <title>Christopher Bonner - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;0,800;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet">
+  </head>
+  <body>
+    <div class="background">
+      <div id="auraThingy"></div>
     </div>
-    <div class="header-anchors-container">
-      <ul id="menu-items" class="header-anchors">
-        <li onclick="onClickNavLink('start-section')">
-          <p class="background-code">01</p>
-          <a href="#"><span class="background-code">// </span>Start</a>
-        </li>
-        <li onclick="onClickNavLink('about-section')">
-          <p class="background-code">02</p>
-          <a href="#"><span class="background-code">// </span>About</a>
-        </li>
-        <li onclick="onClickNavLink('skills-section')">
-          <p class="background-code">03</p>
-          <a href="#"><span class="background-code">// </span>Skills</a>
-        </li>
-        <li onclick="onClickNavLink('projects-section')">
-          <p class="background-code">04</p>
-          <a href="#"><span class="background-code">// </span>Projects</a>
-        </li>
-        <li onclick="onClickNavLink('footer-section')">
-          <p class="background-code">05</p>
-          <a href="#"><span class="background-code">// </span>Contact</a>
-        </li>
-        <li>
-          <p class="background-code">06</p>
-          <a href="#"><span class="background-code">// </span>CV</a>
-        </li>
-      </ul>
-      <div class="menu-button-container"><img src="images/icons/dropdown.png" id="menu-button"></div>
-    </div>
-  </nav>
-  <section id="start-section">
-    <div class="start-content">
-      <div class="start-details-container">
+    <script src="scripts/index.js" async defer></script>
+    <nav id="header-navbar">
+      <p class="logo"><span class="logo-code">&lt;</span>CHRIS<span class="logo-code">&sol;&gt;</span></p>
+      <div class="header-anchors-container">
+        <ul id="menu-items" class="header-anchors">
+          <li onclick="onClickNavLink('start-section')">
+            <p class="background-code">01</p>
+            <a href="#"><span class="background-code">// </span>Start</a>
+          </li>
+          <li onclick="onClickNavLink('about-section')">
+            <p class="background-code">02</p>
+            <a href="#"><span class="background-code">// </span>About</a>
+          </li>
+          <li onclick="onClickNavLink('skills-section')">
+            <p class="background-code">03</p>
+            <a href="#"><span class="background-code">// </span>Skills</a>
+          </li>
+          <li onclick="onClickNavLink('projects-section')">
+            <p class="background-code">04</p>
+            <a href="#"><span class="background-code">// </span>Projects</a>
+          </li>
+          <li onclick="onClickNavLink('footer-section')">
+            <p class="background-code">05</p>
+            <a href="#"><span class="background-code">// </span>Contact</a>
+          </li>
+          <li>
+            <p class="background-code">06</p>
+            <a href="#"><span class="background-code">// </span>CV</a>
+          </li>
+        </ul>
+        <div class="menu-button-container"><img src="images/icons/dropdown.png" id="menu-button"></div>
+      </div>
+    </nav>
+    <section id="start-section">
+      <div class="start-content">
+        <div class="start-details-container">
+          <div class="section-symbols-css">
+            <p class="section-title-css">.Start</p>
+            <div class="brackets">
+              <p class="first-bracket">&#123;</p>
+              <div class="start-details">
+                <p class="background-code">&lt;h1&gt;</p>
+                <p class="hi-text">Hi, I'm</p>
+                <div>
+                  <h1 class="start-title-name">CHRISTOPHER BONNER</h1>
+                  <p class="background-code">&lt;h1/&gt;</p>
+                </div>
+                <p class="background-code">&lt;p&gt;</p>
+                <p class="start-caption-one">I design and develop <br><span id="glitchy-text">Websites</span></p>
+                <p class="start-caption-two">Let me Show You...</p>
+                <p class="background-code">&lt;p/&gt;</p>
+                <div class="socials">
+                  <div class="social-container">
+                    <img onclick="redirectToPage('https://www.linkedin.com/in/christopher-bonner-293287256/')" src="images/icons/linkedin.svg" class="social">
+                  </div>
+                  <div class="social-container">
+                    <img onclick="redirectToPage('https://github.com/ChrisB200')" src="images/icons/github.svg"class="social">
+                  </div>
+                </div>
+              </div>
+              <p class="second-bracket">&#125;</p>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="start-image-container">
+          <div class="start-picture-container">
+            <img src="/images/me/pic-of-me.jpg" alt="Picture of Christopher Bonner in a suit" class="start-picture">
+          </div>
+          <div class="start-image-code">
+            <div>
+              <p class="background-code">html</p>
+              <p class="background-code">height: 375px;</p>
+              <p class="background-code">colour: #01F2D6</p>
+              <p class="background-code">class="div-container"</p>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </section>
+    <section id="about-section">
+      <h1 class="section-title">ABOUT ME</h1>
+      <div class="about-content">
         <div class="section-symbols-css">
-          <p class="section-title-css">.Start</p>
+          <p class="section-title-css" class="section-title-css-active">.About Me</p>
           <div class="brackets">
             <p class="first-bracket">&#123;</p>
-            <div class="start-details">
-              <p class="background-code">&lt;h1&gt;</p>
-              <p class="hi-text">Hi, I'm</p>
-              <div>
-                <h1 class="start-title-name">CHRISTOPHER BONNER</h1>
-                <p class="background-code">&lt;h1/&gt;</p>
+            <div class="about-details">
+              <div class="about-details-bullets">
+                <p class="about-highlighted"><span>Education:</span></p>
+                <p class="about-details-body"> I'm a student at the Matthew Boulton Campus, currently working towards a Level 3 Extended Diploma in Programming and Cybersecurity. I have a genuine interest in programming because it allows me to solve problems and bring ideas to life. Whether it's developing websites, software, or delving into cybersecurity<span class="about-highlighted">;</span></p>
               </div>
-              <p class="background-code">&lt;p&gt;</p>
-              <p class="start-caption-one">I design and develop <span id="glitchy-text">Websites</span></p>
-              <p class="start-caption-two">Let me Show You...</p>
-              <p class="background-code">&lt;p/&gt;</p>
-              <div class="socials">
-                <div class="social-container">
-                  <img onclick="redirectToPage('https://www.linkedin.com/in/christopher-bonner-293287256/')" src="images/icons/linkedin.svg" class="social">
-                </div>
-                <div class="social-container">
-                  <img onclick="redirectToPage('https://github.com/ChrisB200')" src="images/icons/github.svg"class="social">
-                </div>
+              <div class="about-details-bullets">
+                <p class="about-highlighted"><span>Goals:</span></p>
+                <p class="about-details-body"> My main goal is to become a proficient software developer and contribute meaningfully to the tech industry. At this current moment I do not know what type of software developer I want to be, since I am extremely open minded to new technologies that are presented to me<span class="about-highlighted">;</span></p>
+              </div>
+              
+              <div class="about-details-bullets">
+                <p class="about-highlighted"><span>Hobbies:</span></p>
+                <div class="about-bullet-points">
+                  <div>
+                    <p>-</p>
+                    <p class="about-details-body"> I Like playing games, alongside developing them in my free time.</p>
+                  </div>
+                  <div>
+                    <p>-</p>
+                    <p class="about-details-body"> I Like building computers.</p>
+                  </div>
+                  <div>
+                    <p>-</p>
+                    <p class="about-details-body"> I Like video editing.</p>
+                  </div>
+                  <div>
+                    <p>-</p>
+                    <p class="about-details-body"> I Like repairing devices.</p>
+                  </div>
+                </div>          
+              </div>
+              <div class="about-details-bullets">
+                <p class="about-highlighted"><span>Achievements:</span></p>
+                <div class="about-bullet-points">
+                  <div>
+                    <p>-</p>
+                    <p class="about-details-body"> I won student of the year from BMet, during the Digital Skills Project.</p>
+                  </div>
+                  <div>
+                    <p>-</p>
+                    <p class="about-details-body"> I won an award for teamwork during the Digital Skills Project.</p>
+                  </div>
+                  <div>
+                    <p>-</p>
+                    <p class="about-details-body"> I won an award for project leader during the Digital Skills Project.</p>
+                  </div>         
               </div>
             </div>
             <p class="second-bracket">&#125;</p>
-          </div>
         </div>
       </div>
-      <!-- <div class="start-image-container">
-        <div class="start-picture-container">
-          <img src="/images/me/pic-of-me.jpg" alt="Picture of Christopher Bonner in a suit" class="start-picture">
+    </section>
+    <section id="skills-section">
+      <h1 class="section-title">MY SKILLS</h1>
+      <div class="skills-container">
+        <div class="skill-area">
+          <div class="skill-area-title">
+            <div class="skill-area-icon">
+              <img src="images/logos/code.svg">
+            </div>
+            <p class="skill-title">LANGUAGES</p>
+          </div>
+          <ul class="skill-tools">
+            <li>Python</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>C#</li>
+            <li>Visual Basic</li>
+          </ul>
         </div>
-        <div class="start-image-code">
+        <div class="skill-area">
+          <div class="skill-area-title">
+            <div class="skill-area-icon">
+              <img src="images/logos/react.svg">
+            </div>
+            <p class="skill-title">FRAMEWORKS</p>
+          </div>       
+          <ul class="skill-tools">
+            <li>Flask</li>
+            <li>React</li>
+            <li>MySQL</li>
+          </ul>
+        </div>
+        <div class="skill-area">
+          <div class="skill-area-title">
+            <div class="skill-area-icon">
+              <img src="images/logos/plus.svg">
+            </div>
+            <p class="skill-title">OTHER</p>
+          </div>       
+          <ul class="skill-tools">
+            <li>Unity</li>
+            <li>Unreal Engine</li>
+            <li>Pygame</li>
+            <li>Adobe XD</li>
+            <li>Figma</li>
+            <li>Blender</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section id="projects-section">
+      <h1 class="section-title">MY PROJECTS</h1>
+      <div class="projects-container">
+        <div class="project">
           <div>
-            <p class="background-code">html</p>
-            <p class="background-code">height: 375px;</p>
-            <p class="background-code">colour: #01F2D6</p>
-            <p class="background-code">class="div-container"</p>
-          </div>
-        </div>
-      </div> -->
-    </div>
-  </section>
-  <section id="about-section">
-    <h1 class="section-title">ABOUT ME</h1>
-    <div class="about-content">
-      <div class="section-symbols-css">
-        <p class="section-title-css" class="section-title-css-active">.About Me</p>
-        <div class="brackets">
-          <p class="first-bracket">&#123;</p>
-          <div class="about-details">
-            <div class="about-details-bullets">
-              <p class="about-highlighted"><span>Education:</span></p>
-              <p class="about-details-body"> I'm a student at the Matthew Boulton Campus, currently working towards a Level 3 Extended Diploma in Programming and Cybersecurity. I have a genuine interest in programming because it allows me to solve problems and bring ideas to life. Whether it's developing websites, software, or delving into cybersecurity<span class="about-highlighted">;</span></p>
-            </div>
-            <div class="about-details-bullets">
-              <p class="about-highlighted"><span>Goals:</span></p>
-              <p class="about-details-body"> My main goal is to become a proficient software developer and contribute meaningfully to the tech industry. At this current moment I do not know what type of software developer I want to be, since I am extremely open minded to new technologies that are presented to me<span class="about-highlighted">;</span></p>
-            </div>
-            
-            <div class="about-details-bullets">
-              <p class="about-highlighted"><span>Hobbies:</span></p>
-              <div class="about-bullet-points">
-                <div>
-                  <p>-</p>
-                  <p class="about-details-body"> I Like playing games, alongside developing them in my free time.</p>
-                </div>
-                <div>
-                  <p>-</p>
-                  <p class="about-details-body"> I Like building computers.</p>
-                </div>
-                <div>
-                  <p>-</p>
-                  <p class="about-details-body"> I Like video editing.</p>
-                </div>
-                <div>
-                  <p>-</p>
-                  <p class="about-details-body"> I Like repairing devices.</p>
-                </div>
-              </div>          
-            </div>
-            <div class="about-details-bullets">
-              <p class="about-highlighted"><span>Achievements:</span></p>
-              <div class="about-bullet-points">
-                <div>
-                  <p>-</p>
-                  <p class="about-details-body"> I won student of the year from BMet, during the Digital Skills Project.</p>
-                </div>
-                <div>
-                  <p>-</p>
-                  <p class="about-details-body"> I won an award for teamwork during the Digital Skills Project.</p>
-                </div>
-                <div>
-                  <p>-</p>
-                  <p class="about-details-body"> I won an award for project leader during the Digital Skills Project.</p>
-                </div>         
+            <div class="project-image">
+              <p>No Preview Currently</p>
             </div>
           </div>
-          <p class="second-bracket">&#125;</p>
-      </div>
-    </div>
-  </section>
-  <section id="skills-section">
-    <h1 class="section-title">MY SKILLS</h1>
-    <div class="skills-container">
-      <div class="skill-area">
-        <div class="skill-area-title">
-          <div class="skill-area-icon">
-            <img src="images/logos/code.svg">
-          </div>
-          <p class="skill-title">LANGUAGES</p>
-        </div>
-        <ul class="skill-tools">
-          <li>Python</li>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-          <li>C#</li>
-          <li>Visual Basic</li>
-        </ul>
-      </div>
-      <div class="skill-area">
-        <div class="skill-area-title">
-          <div class="skill-area-icon">
-            <img src="images/logos/react.svg">
-          </div>
-          <p class="skill-title">FRAMEWORKS</p>
-        </div>       
-        <ul class="skill-tools">
-          <li>Flask</li>
-          <li>React</li>
-          <li>MySQL</li>
-        </ul>
-      </div>
-      <div class="skill-area">
-        <div class="skill-area-title">
-          <div class="skill-area-icon">
-            <img src="images/logos/plus.svg">
-          </div>
-          <p class="skill-title">OTHER</p>
-        </div>       
-        <ul class="skill-tools">
-          <li>Unity</li>
-          <li>Unreal Engine</li>
-          <li>Pygame</li>
-          <li>Adobe XD</li>
-          <li>Figma</li>
-          <li>Blender</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-  <section id="projects-section">
-    <h1 class="section-title">MY PROJECTS</h1>
-    <div class="projects-container">
-      <div class="project">
-        <div>
-          <div class="project-image">
-            <p>No Preview Currently</p>
+          <div class="project-details">
+            <p class="project-title">JOB SEARCH</p>
+            <p class="project-description">This simplifies the searching process of part-time jobs for students. It does this by getting every job that is relevant to them and applying for them.</p>
+            <ul class="project-skills">
+              <li>Python</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>Flask</li>
+              <li>MySQL</li>
+            </ul>
           </div>
         </div>
-        <div class="project-details">
-          <p class="project-title">JOB SEARCH</p>
-          <p class="project-description">This simplifies the searching process of part-time jobs for students. It does this by getting every job that is relevant to them and applying for them.</p>
-          <ul class="project-skills">
-            <li>Python</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Flask</li>
-            <li>MySQL</li>
-          </ul>
-        </div>
-      </div>
-      <div class="project">
-        <div>
-          <div class="project-image">
-            <p>No Preview Currently</p>
+        <div class="project">
+          <div>
+            <div class="project-image">
+              <p>No Preview Currently</p>
+            </div>
+          </div>
+          <div class="project-details">
+            <p class="project-title">Finance Manager</p>
+            <p class="project-description">This manages my finances by using my payslip data to generate saving goals. To get my payslip data I use OCR technology</p>
+            <ul class="project-skills">
+              <li>Python</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>Flask</li>
+              <li>MySQL</li>
+            </ul>
           </div>
         </div>
-        <div class="project-details">
-          <p class="project-title">Finance Manager</p>
-          <p class="project-description">This manages my finances by using my payslip data to generate saving goals. To get my payslip data I use OCR technology</p>
-          <ul class="project-skills">
-            <li>Python</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Flask</li>
-            <li>MySQL</li>
-          </ul>
+      </div>
+    </section>
+    <footer id="footer-section">
+      <div class="footer-contact">
+        <div class="contact-description">
+          <h1>Avaiable for select freelance opportunities</h1>
+          <p>Have an exciting project you need help with?</p>
+          <p>Send me an email or contact me via instant message!</p>
+        </div>
+        <div class="contact-socials">
+          <a href="mailto:christopher.bonner@outlook.com," class="contact-email">christopher.bonner@outlook.com</a>
+          <a class="contact-linkedin" onclick="redirectToPage('https://www.linkedin.com/in/christopher-bonner-293287256/')">LinkedIn</a>
+          <a class="contact-github" onclick="redirectToPage('https://github.com/ChrisB200')">GitHub</a>
         </div>
       </div>
-      <div class="project">
-        <div>
-          <div class="project-image">
-            <p>No Preview Currently</p>
-          </div>
-        </div>
-        <div class="project-details">
-          <p class="project-title">JOB SEARCH</p>
-          <p class="project-description">This simplifies the searchging process of part-time jobs for students. It does this by getting every job that is relevant to them and applying for them.</p>
-          <ul class="project-skills">
-            <li>Python</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Flask</li>
-            <li>MySQL</li>
-          </ul>
-        </div>
+      <div class="footer-testimonial">
       </div>
-    </div>
-  </section>
-  <footer id="footer-section">
-    <div class="footer-contact">
-      <div class="contact-description">
-        <h1>Avaiable for select freelance opportunities</h1>
-        <p>Have an exciting project you need help with?</p>
-        <p>Send me an email or contact me via instant message!</p>
-      </div>
-      <div class="contact-socials">
-        <a href="mailto:christopher.bonner@outlook.com," class="contact-email">christopher.bonner@outlook.com</a>
-        <a class="contact-linkedin" onclick="redirectToPage('https://www.linkedin.com/in/christopher-bonner-293287256/')">LinkedIn</a>
-        <a class="contact-github" onclick="redirectToPage('https://github.com/ChrisB200')">GitHub</a>
-      </div>
-    </div>
-    <div class="footer-testimonial">
-    </div>
-  </footer>
-</body>
-
+    </footer>
+  </body>
 </html>
